@@ -1,6 +1,5 @@
 import { JapaneseDiacriticRows } from '../enums/japanese-diacritic-rows';
 import { JapaneseMonographColumns } from '../enums/japanese-monograph-columns';
-import { JapaneseMonographRows } from '../enums/japanese-monograph-rows';
 import { JapaneseCharacterRow } from '../interfaces/japanese-characters-row';
 
 export const gDiacritics: JapaneseCharacterRow = {
