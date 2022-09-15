@@ -7,3 +7,8 @@
 ></app-syllabary-page>
 <app-button-with-icon text="Learn"></app-button-with-icon>
 <app-button-with-icon text="Practice"></app-button-with-icon>
+<app-characters-table
+  title="Monographs"
+  [rows]="this.jss.getHiraganaMonographs()"
+  [columns]="this.jss.getHiraganaMonographsColumns()"
+></app-characters-table>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JapaneseSyllabariesService } from 'src/app/services/japanese-syllabaries.service';
 
 @Component({
   selector: 'app-hiragana-page',
@@ -13,7 +14,7 @@ export class HiraganaPageComponent implements OnInit {
   description: string =
     'It is a phonetic lettering system. The word hiragana literally means "flowing" or "simple" kana ("simple" originally as contrasted with kanji).';
 
-  constructor() {}
+  constructor(public jss: JapaneseSyllabariesService) {}
 
   ngOnInit(): void {}
 }

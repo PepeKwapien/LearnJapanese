@@ -35,6 +35,7 @@ import {
   wMonographs,
   yMonographs,
 } from '../data/hiragana-monographs';
+import { JapaneseMonographColumns } from '../enums/japanese-monograph-columns';
 import { JapaneseCharacterRow } from '../interfaces/japanese-characters-row';
 
 @Injectable({
@@ -82,6 +83,16 @@ export class JapaneseSyllabariesService {
       dDigraphsDiacritics,
       bDigraphsDiacritics,
       pDigraphsDiacritics,
+    ];
+  }
+
+  public getHiraganaMonographsColumns(): JapaneseMonographColumns[] {
+    return [
+      JapaneseMonographColumns.a,
+      JapaneseMonographColumns.i,
+      JapaneseMonographColumns.u,
+      JapaneseMonographColumns.e,
+      JapaneseMonographColumns.o,
     ];
   }
 }

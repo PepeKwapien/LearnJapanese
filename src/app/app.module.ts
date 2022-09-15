@@ -9,8 +9,6 @@ import { SyllabaryPageComponent } from './components/syllabary-page/syllabary-pa
 import { HiraganaPageComponent } from './pages/hiragana-page/hiragana-page.component';
 import { NavigationButtonComponent } from './components/navigation-button/navigation-button.component';
 import { CharactersTableComponent } from './components/characters-table/characters-table.component';
-import { CharactersTableRowComponent } from './components/characters-table-row/characters-table-row.component';
-import { CharactersTableHeaderComponent } from './components/characters-table-header/characters-table-header.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +19,9 @@ import { CharactersTableHeaderComponent } from './components/characters-table-he
     HiraganaPageComponent,
     NavigationButtonComponent,
     CharactersTableComponent,
-    CharactersTableRowComponent,
-    CharactersTableHeaderComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,1 +1,16 @@
-<p>characters-table works!</p>
+<h2>{{ title }}</h2>
+<table>
+  <thead>
+    <th *ngFor="let column of [' '].concat(columns)">{{ column }}</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows">
+      <td>
+        {{ row.row }}
+      </td>
+      <td *ngFor="let cell of row.cells">
+        {{ cell.character.character }}
+      </td>
+    </tr>
+  </tbody>
+</table>
