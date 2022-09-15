@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ButtonWithIconComponent implements OnInit {
   @Input() text: string = 'Click me';
   @Input() disabled: boolean = false;
+  @Input() link: string = '';
 
   constructor() {}
 
