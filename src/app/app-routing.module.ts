@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SyllabaryPageComponent } from './components/syllabary-page/syllabary-page.component';
+import { HiraganaPageComponent } from './pages/hiragana-page/hiragana-page.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 
 const routes: Routes = [
@@ -12,7 +12,7 @@ const routes: Routes = [
   {
     path: 'hiragana',
     title: 'Learn Japanese - Hiragana',
-    component: SyllabaryPageComponent,
+    component: HiraganaPageComponent,
   },
 ];
 
