@@ -10,6 +10,7 @@ import { HiraganaPageComponent } from './pages/hiragana-page/hiragana-page.compo
 import { NavigationButtonComponent } from './components/navigation-button/navigation-button.component';
 import { CharactersTableComponent } from './components/characters-table/characters-table.component';
 import { CharactersTableCellComponent } from './components/characters-table-cell/characters-table-cell.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { CharactersTableCellComponent } from './components/characters-table-cell
     CharactersTableComponent,
     CharactersTableCellComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

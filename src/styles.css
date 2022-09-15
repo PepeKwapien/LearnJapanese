@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Nuku";
+  src: local("Nuku"), url(./assets/fonts/nuku1.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Manga";
+  src: local("Manga"), url(./assets/fonts/mangat.ttf) format("truetype");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Manga";
+}
