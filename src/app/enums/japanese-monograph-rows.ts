@@ -1,5 +1,5 @@
 export enum JapaneseMonographRows {
-  empty = 'none',
+  empty = '∅',
   k = 'k',
   s = 's',
   t = 't',
@@ -9,5 +9,5 @@ export enum JapaneseMonographRows {
   y = 'y',
   r = 'r',
   w = 'w',
-  mn = 'monograph-n',
+  mn = 'n-n',
 }
