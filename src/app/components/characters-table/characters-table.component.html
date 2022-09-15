@@ -9,7 +9,9 @@
         {{ row.row }}
       </td>
       <td *ngFor="let cell of row.cells">
-        {{ cell.character.character }}
+        <app-characters-table-cell
+          [character]="cell.character"
+        ></app-characters-table-cell>
       </td>
     </tr>
   </tbody>
