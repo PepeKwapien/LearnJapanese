@@ -7,6 +7,7 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { ButtonWithIconComponent } from './components/button-with-icon/button-with-icon.component';
 import { SyllabaryPageComponent } from './components/syllabary-page/syllabary-page.component';
 import { HiraganaPageComponent } from './pages/hiragana-page/hiragana-page.component';
+import { NavigationButtonComponent } from './components/navigation-button/navigation-button.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HiraganaPageComponent } from './pages/hiragana-page/hiragana-page.compo
     LandingPageComponent,
     ButtonWithIconComponent,
     SyllabaryPageComponent,
-    HiraganaPageComponent
+    HiraganaPageComponent,
+    NavigationButtonComponent
   ],
   imports: [
     BrowserModule,
