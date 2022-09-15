@@ -12,3 +12,18 @@
   [rows]="this.jss.getHiraganaMonographs()"
   [columns]="this.jss.getHiraganaMonographsColumns()"
 ></app-characters-table>
+<app-characters-table
+  title="Digraphs"
+  [rows]="this.jss.getHiraganaDigraphs()"
+  [columns]="this.jss.getHiraganaDigraphsColumns()"
+></app-characters-table>
+<app-characters-table
+  title="Diacritics"
+  [rows]="this.jss.getHiraganaDiacritics()"
+  [columns]="this.jss.getHiraganaMonographsColumns()"
+></app-characters-table>
+<app-characters-table
+  title="Digraphs with diacritics"
+  [rows]="this.jss.getHiraganaDigraphsWithDiacritics()"
+  [columns]="this.jss.getHiraganaDigraphsColumns()"
+></app-characters-table>

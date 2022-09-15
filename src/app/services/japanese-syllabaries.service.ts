@@ -35,6 +35,7 @@ import {
   wMonographs,
   yMonographs,
 } from '../data/hiragana-monographs';
+import { JapaneseDigraphColumns } from '../enums/japanese-digraph-columns';
 import { JapaneseMonographColumns } from '../enums/japanese-monograph-columns';
 import { JapaneseCharacterRow } from '../interfaces/japanese-characters-row';
 
@@ -93,6 +94,14 @@ export class JapaneseSyllabariesService {
       JapaneseMonographColumns.u,
       JapaneseMonographColumns.e,
       JapaneseMonographColumns.o,
+    ];
+  }
+
+  public getHiraganaDigraphsColumns(): JapaneseDigraphColumns[] {
+    return [
+      JapaneseDigraphColumns.ya,
+      JapaneseDigraphColumns.yu,
+      JapaneseDigraphColumns.yo,
     ];
   }
 }
