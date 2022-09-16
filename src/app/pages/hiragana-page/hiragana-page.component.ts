@@ -9,7 +9,7 @@ import { JapaneseSyllabariesService } from 'src/app/services/japanese-syllabarie
 })
 export class HiraganaPageComponent implements OnInit {
   syllabary: Syllabaries = Syllabaries.hiragana;
-  monographs: number = 45;
+  monographs: number = 46;
   digraphs: number = 21;
   diacritics: number = 25;
   description: string =

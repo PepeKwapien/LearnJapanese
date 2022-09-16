@@ -192,16 +192,8 @@ export const yMonographs: JapaneseCharacterRow = {
       character: { transcription: 'ya', character: 'や' },
     },
     {
-      column: JapaneseMonographColumns.i,
-      character: { transcription: '', character: '' },
-    },
-    {
       column: JapaneseMonographColumns.u,
       character: { transcription: 'yu', character: 'ゆ' },
-    },
-    {
-      column: JapaneseMonographColumns.e,
-      character: { transcription: '', character: '' },
     },
     {
       column: JapaneseMonographColumns.o,
@@ -242,18 +234,6 @@ export const wMonographs: JapaneseCharacterRow = {
     {
       column: JapaneseMonographColumns.a,
       character: { transcription: 'wa', character: 'わ' },
-    },
-    {
-      column: JapaneseMonographColumns.i,
-      character: { transcription: '', character: '' },
-    },
-    {
-      column: JapaneseMonographColumns.u,
-      character: { transcription: '', character: '' },
-    },
-    {
-      column: JapaneseMonographColumns.e,
-      character: { transcription: '', character: '' },
     },
     {
       column: JapaneseMonographColumns.o,
