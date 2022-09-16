@@ -13,6 +13,8 @@ import { CharactersTableCellComponent } from './components/characters-table-cell
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PracticeFormComponent } from './components/practice-form/practice-form.component';
 import { FormsModule } from '@angular/forms';
+import { PracticeModuleComponent } from './components/practice-module/practice-module.component';
+import { PracticeHiraganaPageComponent } from './pages/practice-hiragana-page/practice-hiragana-page.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { FormsModule } from '@angular/forms';
     CharactersTableComponent,
     CharactersTableCellComponent,
     PracticeFormComponent,
+    PracticeModuleComponent,
+    PracticeHiraganaPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [],

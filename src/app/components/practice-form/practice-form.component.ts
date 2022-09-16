@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PracticeModes } from 'src/app/enums/practice-modes';
 import { PracticeFormModel } from 'src/app/interfaces/practice-form-model';
 import { PracticeService } from 'src/app/services/practice.service';
@@ -14,7 +15,7 @@ export class PracticeFormComponent implements OnInit {
 
   displayError: boolean = false;
 
-  constructor(public practice: PracticeService) {
+  constructor(public practice: PracticeService, public router: Router) {
     this.model = {
       mode: undefined,
       digraphs: false,
@@ -34,6 +35,7 @@ export class PracticeFormComponent implements OnInit {
       this.displayError = true;
     } else {
       this.practice.setModel(this.model);
+      this.router.navigateByUrl('hiragana/practice');
     }
   }
 }
