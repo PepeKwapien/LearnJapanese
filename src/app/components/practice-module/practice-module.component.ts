@@ -15,8 +15,10 @@ export class PracticeModuleComponent implements OnInit {
   @Input() syllabary: Syllabaries;
   private characters: JapaneseCharacter[];
   public numberOfCharacters: number;
-  public currentCharacter: number;
+  public characterCountUpToNow: number;
+  private currentCharacterIndex: number;
   private model: PracticeFormModel;
+  public currentCharacter: JapaneseCharacter;
 
   constructor(
     public practice: PracticeService,
@@ -55,6 +57,23 @@ export class PracticeModuleComponent implements OnInit {
       .map((element) => element.character);
 
     this.numberOfCharacters = this.characters.length;
-    this.currentCharacter = 0;
+    this.characterCountUpToNow = 0;
+
+    this.pickNextRandomCharacter();
+  }
+
+  private getRandomInt(max: number) {
+    return Math.floor(Math.random() * max);
+  }
+
+  private pickNextRandomCharacter() {
+    this.currentCharacterIndex = this.getRandomInt(this.characters.length);
+    this.currentCharacter = this.characters[this.currentCharacterIndex];
+  }
+
+  nextCharacter() {
+    this.characterCountUpToNow++;
+    this.characters.splice(this.currentCharacterIndex, 1);
+    this.pickNextRandomCharacter();
   }
 }
