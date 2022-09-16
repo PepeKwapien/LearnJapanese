@@ -6,7 +6,7 @@
       name="mode"
       id="characters"
       [(ngModel)]="model.mode"
-      value="characters"
+      [value]="practiceModes.characters"
     />
     <label for="characters">Characters</label>
   </div>
@@ -16,7 +16,7 @@
       name="mode"
       id="transcription"
       [(ngModel)]="model.mode"
-      value="transcription"
+      [value]="practiceModes.transcription"
     />
     <label for="transcription">Transcription</label>
   </div>
@@ -26,7 +26,7 @@
       name="mode"
       id="both"
       [(ngModel)]="model.mode"
-      value="both"
+      [value]="practiceModes.both"
     />
     <label for="both">Both</label>
   </div>

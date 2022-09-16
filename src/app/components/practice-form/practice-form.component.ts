@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PracticeModes } from 'src/app/enums/practice-modes';
 import { PracticeFormModel } from 'src/app/interfaces/practice-form-model';
 
 @Component({
@@ -8,6 +9,7 @@ import { PracticeFormModel } from 'src/app/interfaces/practice-form-model';
 })
 export class PracticeFormComponent implements OnInit {
   model: PracticeFormModel;
+  practiceModes = PracticeModes;
 
   constructor() {
     this.model = {
