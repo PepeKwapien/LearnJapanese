@@ -13,11 +13,13 @@ export class PracticeFormComponent implements OnInit {
   model: PracticeFormModel;
   practiceModes = PracticeModes;
 
-  displayError: boolean = false;
+  displayModeError: boolean = false;
+  displayIncludeError: boolean = false;
 
   constructor(public practice: PracticeService, public router: Router) {
     this.model = {
       mode: undefined,
+      monographs: true,
       digraphs: false,
       diacritics: false,
       digraphsdiacritics: false,
@@ -26,13 +28,25 @@ export class PracticeFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  clearError() {
-    this.displayError = false;
+  clearModeError() {
+    this.displayModeError = false;
+  }
+  clearIncludeError() {
+    this.displayIncludeError = false;
   }
 
   onSubmit() {
     if (!this.model.mode) {
-      this.displayError = true;
+      this.displayModeError = true;
+    } else if (
+      !(
+        this.model.monographs ||
+        this.model.digraphs ||
+        this.model.diacritics ||
+        this.model.digraphsdiacritics
+      )
+    ) {
+      this.displayIncludeError = true;
     } else {
       this.practice.setModel(this.model);
       this.router.navigateByUrl('hiragana/practice');

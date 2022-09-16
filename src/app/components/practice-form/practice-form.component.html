@@ -1,13 +1,13 @@
 <form (ngSubmit)="onSubmit()">
   <p>What would you like to practice?</p>
-  <p *ngIf="displayError">Choose practice mode!</p>
+  <p *ngIf="displayModeError">Choose practice mode!</p>
   <div>
     <input
       type="radio"
       name="mode"
       id="characters"
       [(ngModel)]="model.mode"
-      (ngModelChange)="clearError()"
+      (ngModelChange)="clearModeError()"
       [value]="practiceModes.characters"
     />
     <label for="characters">Characters</label>
@@ -18,7 +18,7 @@
       name="mode"
       id="transcription"
       [(ngModel)]="model.mode"
-      (ngModelChange)="clearError()"
+      (ngModelChange)="clearModeError()"
       [value]="practiceModes.transcription"
     />
     <label for="transcription">Transcription</label>
@@ -29,10 +29,20 @@
       name="mode"
       id="both"
       [(ngModel)]="model.mode"
-      (ngModelChange)="clearError()"
+      (ngModelChange)="clearModeError()"
       [value]="practiceModes.both"
     />
     <label for="both">Both</label>
+  </div>
+  <div>
+    <label for="monographs">Include monographs: </label>
+    <input
+      type="checkbox"
+      name="monographs"
+      id="monographs"
+      [(ngModel)]="model.monographs"
+      (ngModelChange)="clearIncludeError()"
+    />
   </div>
   <div>
     <label for="digraphs">Include digraphs: </label>
@@ -41,6 +51,7 @@
       name="digraphs"
       id="digraphs"
       [(ngModel)]="model.digraphs"
+      (ngModelChange)="clearIncludeError()"
     />
   </div>
   <div>
@@ -50,6 +61,7 @@
       name="diacritics"
       id="diacritics"
       [(ngModel)]="model.diacritics"
+      (ngModelChange)="clearIncludeError()"
     />
   </div>
   <div>
@@ -59,7 +71,9 @@
       name="digraphsdiacritics"
       id="digraphsdiacritics"
       [(ngModel)]="model.digraphsdiacritics"
+      (ngModelChange)="clearIncludeError()"
     />
   </div>
+  <p *ngIf="displayIncludeError">Choose practice mode!</p>
   <input type="submit" value="Start" />
 </form>
