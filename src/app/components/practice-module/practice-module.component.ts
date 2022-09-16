@@ -72,8 +72,14 @@ export class PracticeModuleComponent implements OnInit {
   }
 
   nextCharacter() {
-    this.characterCountUpToNow++;
+    if (this.characterCountUpToNow + 1 < this.numberOfCharacters) {
+      this.characterCountUpToNow++;
+    }
+
     this.characters.splice(this.currentCharacterIndex, 1);
-    this.pickNextRandomCharacter();
+
+    if (this.characters.length > 0) {
+      this.pickNextRandomCharacter();
+    }
   }
 }
