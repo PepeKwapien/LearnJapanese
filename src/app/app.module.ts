@@ -11,6 +11,8 @@ import { NavigationButtonComponent } from './components/navigation-button/naviga
 import { CharactersTableComponent } from './components/characters-table/characters-table.component';
 import { CharactersTableCellComponent } from './components/characters-table-cell/characters-table-cell.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PracticeFormComponent } from './components/practice-form/practice-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavigationButtonComponent,
     CharactersTableComponent,
     CharactersTableCellComponent,
+    PracticeFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

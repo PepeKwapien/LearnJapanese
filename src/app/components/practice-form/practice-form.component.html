@@ -1,0 +1,61 @@
+<form (ngSubmit)="onSubmit()">
+  <p>What would you like to practice?</p>
+  <div>
+    <input
+      type="radio"
+      name="mode"
+      id="characters"
+      [(ngModel)]="model.mode"
+      value="characters"
+    />
+    <label for="characters">Characters</label>
+  </div>
+  <div>
+    <input
+      type="radio"
+      name="mode"
+      id="transcription"
+      [(ngModel)]="model.mode"
+      value="transcription"
+    />
+    <label for="transcription">Transcription</label>
+  </div>
+  <div>
+    <input
+      type="radio"
+      name="mode"
+      id="both"
+      [(ngModel)]="model.mode"
+      value="both"
+    />
+    <label for="both">Both</label>
+  </div>
+  <div>
+    <label for="digraphs">Include digraphs: </label>
+    <input
+      type="checkbox"
+      name="digraphs"
+      id="digraphs"
+      [(ngModel)]="model.digraphs"
+    />
+  </div>
+  <div>
+    <label for="diacritics">Include diacritics: </label>
+    <input
+      type="checkbox"
+      name="diacritics"
+      id="diacritics"
+      [(ngModel)]="model.diacritics"
+    />
+  </div>
+  <div>
+    <label for="digraphsdiacritics">Include digraphs with diacritics: </label>
+    <input
+      type="checkbox"
+      name="digraphsdiacritics"
+      id="digraphsdiacritics"
+      [(ngModel)]="model.digraphsdiacritics"
+    />
+  </div>
+  <input type="submit" value="Start" />
+</form>

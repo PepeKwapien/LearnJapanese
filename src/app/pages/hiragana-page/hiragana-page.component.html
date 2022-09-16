@@ -9,7 +9,11 @@
   text="Learn"
   (click)="toggleLearn()"
 ></app-button-with-icon>
-<app-button-with-icon text="Practice"></app-button-with-icon>
+<app-button-with-icon
+  text="Practice"
+  (click)="togglePractice()"
+></app-button-with-icon>
+
 <div *ngIf="showLearn">
   <app-characters-table
     title="Monographs"
@@ -32,3 +36,7 @@
     [columns]="this.jss.getHiraganaDigraphsColumns()"
   ></app-characters-table>
 </div>
+
+<app-practice-form
+  [ngStyle]="{ visibility: showPractice ? 'visible' : 'hidden' }"
+></app-practice-form>
