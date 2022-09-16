@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PracticeModes } from 'src/app/enums/practice-modes';
 import { PracticeFormModel } from 'src/app/interfaces/practice-form-model';
+import { PracticeService } from 'src/app/services/practice.service';
 
 @Component({
   selector: 'app-practice-form',
@@ -11,7 +12,9 @@ export class PracticeFormComponent implements OnInit {
   model: PracticeFormModel;
   practiceModes = PracticeModes;
 
-  constructor() {
+  displayError: boolean = false;
+
+  constructor(public practice: PracticeService) {
     this.model = {
       mode: undefined,
       digraphs: false,
@@ -22,7 +25,15 @@ export class PracticeFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  clearError() {
+    this.displayError = false;
+  }
+
   onSubmit() {
-    console.log(this.model);
+    if (!this.model.mode) {
+      this.displayError = true;
+    } else {
+      this.practice.setModel(this.model);
+    }
   }
 }

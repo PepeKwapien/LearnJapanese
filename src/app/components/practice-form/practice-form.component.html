@@ -1,11 +1,13 @@
 <form (ngSubmit)="onSubmit()">
   <p>What would you like to practice?</p>
+  <p *ngIf="displayError">Choose practice mode!</p>
   <div>
     <input
       type="radio"
       name="mode"
       id="characters"
       [(ngModel)]="model.mode"
+      (ngModelChange)="clearError()"
       [value]="practiceModes.characters"
     />
     <label for="characters">Characters</label>
@@ -16,6 +18,7 @@
       name="mode"
       id="transcription"
       [(ngModel)]="model.mode"
+      (ngModelChange)="clearError()"
       [value]="practiceModes.transcription"
     />
     <label for="transcription">Transcription</label>
@@ -26,6 +29,7 @@
       name="mode"
       id="both"
       [(ngModel)]="model.mode"
+      (ngModelChange)="clearError()"
       [value]="practiceModes.both"
     />
     <label for="both">Both</label>
