@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Syllabaries } from 'src/app/enums/syllabaries';
 import { JapaneseSyllabariesService } from 'src/app/services/japanese-syllabaries.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { JapaneseSyllabariesService } from 'src/app/services/japanese-syllabarie
   styleUrls: ['./hiragana-page.component.css'],
 })
 export class HiraganaPageComponent implements OnInit {
-  syllabary: string = 'Hiragana';
+  syllabary: Syllabaries = Syllabaries.hiragana;
   monographs: number = 45;
   digraphs: number = 21;
   diacritics: number = 25;

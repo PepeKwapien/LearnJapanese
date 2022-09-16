@@ -14,8 +14,8 @@ import { PracticeService } from 'src/app/services/practice.service';
 export class PracticeModuleComponent implements OnInit {
   @Input() syllabary: Syllabaries;
   private characters: JapaneseCharacter[];
-  private numberOfCharacters: number;
-  private currentCharacter: number;
+  public numberOfCharacters: number;
+  public currentCharacter: number;
   private model: PracticeFormModel;
 
   constructor(
@@ -25,19 +25,36 @@ export class PracticeModuleComponent implements OnInit {
 
   ngOnInit(): void {
     this.model = this.practice.getModel();
+    console.log(this.model);
 
     let characterRows: JapaneseCharacterRow[] = [];
     if (this.model.monographs) {
-      characterRows.concat(this.jss.getMonographs(this.syllabary));
+      characterRows = characterRows.concat(
+        this.jss.getMonographs(this.syllabary)
+      );
     }
     if (this.model.digraphs) {
-      characterRows.concat(this.jss.getDigraphs(this.syllabary));
+      characterRows = characterRows.concat(
+        this.jss.getDigraphs(this.syllabary)
+      );
     }
     if (this.model.diacritics) {
-      characterRows.concat(this.jss.getDiacritics(this.syllabary));
+      characterRows = characterRows.concat(
+        this.jss.getDiacritics(this.syllabary)
+      );
     }
     if (this.model.digraphsdiacritics) {
-      characterRows.concat(this.jss.getDigraphsWithDiacritics(this.syllabary));
+      characterRows = characterRows.concat(
+        this.jss.getDigraphsWithDiacritics(this.syllabary)
+      );
     }
+
+    this.characters = characterRows
+      .map((element) => element.cells)
+      .reduce((element1, element2) => element1.concat(element2))
+      .map((element) => element.character);
+
+    this.numberOfCharacters = this.characters.length;
+    this.currentCharacter = 0;
   }
 }

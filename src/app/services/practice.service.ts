@@ -8,6 +8,7 @@ import { PracticeFormModel } from '../interfaces/practice-form-model';
 export class PracticeService {
   private defaultModel: PracticeFormModel = {
     mode: PracticeModes.characters,
+    monographs: true,
     digraphs: false,
     diacritics: false,
     digraphsdiacritics: false,

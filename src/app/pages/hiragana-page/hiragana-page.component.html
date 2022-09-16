@@ -17,23 +17,23 @@
 <div *ngIf="showLearn">
   <app-characters-table
     title="Monographs"
-    [rows]="this.jss.getHiraganaMonographs()"
-    [columns]="this.jss.getHiraganaMonographsColumns()"
+    [rows]="this.jss.getMonographs(syllabary)"
+    [columns]="this.jss.getMonographsColumns(syllabary)"
   ></app-characters-table>
   <app-characters-table
     title="Digraphs"
-    [rows]="this.jss.getHiraganaDigraphs()"
-    [columns]="this.jss.getHiraganaDigraphsColumns()"
+    [rows]="this.jss.getDigraphs(syllabary)"
+    [columns]="this.jss.getDigraphsColumns(syllabary)"
   ></app-characters-table>
   <app-characters-table
     title="Diacritics"
-    [rows]="this.jss.getHiraganaDiacritics()"
-    [columns]="this.jss.getHiraganaMonographsColumns()"
+    [rows]="this.jss.getDiacritics(syllabary)"
+    [columns]="this.jss.getMonographsColumns(syllabary)"
   ></app-characters-table>
   <app-characters-table
     title="Digraphs with diacritics"
-    [rows]="this.jss.getHiraganaDigraphsWithDiacritics()"
-    [columns]="this.jss.getHiraganaDigraphsColumns()"
+    [rows]="this.jss.getDigraphsWithDiacritics(syllabary)"
+    [columns]="this.jss.getDigraphsColumns(syllabary)"
   ></app-characters-table>
 </div>
 
