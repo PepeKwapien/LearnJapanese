@@ -5,25 +5,30 @@
   [diacritics]="diacritics"
   [description]="description"
 ></app-syllabary-page>
-<app-button-with-icon text="Learn"></app-button-with-icon>
+<app-button-with-icon
+  text="Learn"
+  (click)="toggleLearn()"
+></app-button-with-icon>
 <app-button-with-icon text="Practice"></app-button-with-icon>
-<app-characters-table
-  title="Monographs"
-  [rows]="this.jss.getHiraganaMonographs()"
-  [columns]="this.jss.getHiraganaMonographsColumns()"
-></app-characters-table>
-<app-characters-table
-  title="Digraphs"
-  [rows]="this.jss.getHiraganaDigraphs()"
-  [columns]="this.jss.getHiraganaDigraphsColumns()"
-></app-characters-table>
-<app-characters-table
-  title="Diacritics"
-  [rows]="this.jss.getHiraganaDiacritics()"
-  [columns]="this.jss.getHiraganaMonographsColumns()"
-></app-characters-table>
-<app-characters-table
-  title="Digraphs with diacritics"
-  [rows]="this.jss.getHiraganaDigraphsWithDiacritics()"
-  [columns]="this.jss.getHiraganaDigraphsColumns()"
-></app-characters-table>
+<div *ngIf="showLearn">
+  <app-characters-table
+    title="Monographs"
+    [rows]="this.jss.getHiraganaMonographs()"
+    [columns]="this.jss.getHiraganaMonographsColumns()"
+  ></app-characters-table>
+  <app-characters-table
+    title="Digraphs"
+    [rows]="this.jss.getHiraganaDigraphs()"
+    [columns]="this.jss.getHiraganaDigraphsColumns()"
+  ></app-characters-table>
+  <app-characters-table
+    title="Diacritics"
+    [rows]="this.jss.getHiraganaDiacritics()"
+    [columns]="this.jss.getHiraganaMonographsColumns()"
+  ></app-characters-table>
+  <app-characters-table
+    title="Digraphs with diacritics"
+    [rows]="this.jss.getHiraganaDigraphsWithDiacritics()"
+    [columns]="this.jss.getHiraganaDigraphsColumns()"
+  ></app-characters-table>
+</div>

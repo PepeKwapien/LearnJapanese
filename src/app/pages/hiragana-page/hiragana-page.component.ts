@@ -14,7 +14,20 @@ export class HiraganaPageComponent implements OnInit {
   description: string =
     'It is a phonetic lettering system. The word hiragana literally means "flowing" or "simple" kana ("simple" originally as contrasted with kanji).';
 
+  showLearn = false;
+  showPractice = false;
+
   constructor(public jss: JapaneseSyllabariesService) {}
 
   ngOnInit(): void {}
+
+  toggleLearn() {
+    this.showPractice = false;
+    this.showLearn = !this.showLearn;
+  }
+
+  togglePractice() {
+    this.showLearn = false;
+    this.showPractice = !this.showPractice;
+  }
 }
