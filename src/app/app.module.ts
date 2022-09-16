@@ -15,6 +15,7 @@ import { PracticeFormComponent } from './components/practice-form/practice-form.
 import { FormsModule } from '@angular/forms';
 import { PracticeModuleComponent } from './components/practice-module/practice-module.component';
 import { PracticeHiraganaPageComponent } from './pages/practice-hiragana-page/practice-hiragana-page.component';
+import { PracticeModuleCharacterComponent } from './components/practice-module-character/practice-module-character.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PracticeHiraganaPageComponent } from './pages/practice-hiragana-page/pr
     PracticeFormComponent,
     PracticeModuleComponent,
     PracticeHiraganaPageComponent,
+    PracticeModuleCharacterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [],

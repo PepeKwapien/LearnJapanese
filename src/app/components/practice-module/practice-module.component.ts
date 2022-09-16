@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { PracticeModes } from 'src/app/enums/practice-modes';
 import { Syllabaries } from 'src/app/enums/syllabaries';
 import { JapaneseCharacter } from 'src/app/interfaces/japanese-character';
 import { JapaneseCharacterRow } from 'src/app/interfaces/japanese-characters-row';
@@ -27,7 +28,6 @@ export class PracticeModuleComponent implements OnInit {
 
   ngOnInit(): void {
     this.model = this.practice.getModel();
-    console.log(this.model);
 
     let characterRows: JapaneseCharacterRow[] = [];
     if (this.model.monographs) {
@@ -81,5 +81,9 @@ export class PracticeModuleComponent implements OnInit {
     if (this.characters.length > 0) {
       this.pickNextRandomCharacter();
     }
+  }
+
+  getMode(): PracticeModes {
+    return this.model.mode ?? PracticeModes.characters;
   }
 }

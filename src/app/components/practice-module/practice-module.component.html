@@ -1,5 +1,8 @@
 <p>{{ characterCountUpToNow + 1 }}/{{ numberOfCharacters }}</p>
-<p>{{ currentCharacter.character }}</p>
+<app-practice-module-character
+  [character]="currentCharacter"
+  [mode]="getMode()"
+></app-practice-module-character>
 <app-button-with-icon
   (click)="nextCharacter()"
   text="Next"
