@@ -14,3 +14,37 @@
   box-sizing: border-box;
   font-family: "Manga";
 }
+
+:root {
+  --bg-color: #529bfa;
+  --container-color: #3e8df5;
+  --contatiner-border-color: #06418e;
+  --primary-color: #eee;
+  --bs: 0 0.25em 1em rgba(255, 255, 255, 0.25),
+    0 0.125em 0.5em rgba(255, 255, 255, 0.15);
+  --fs: 1.125em;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  font-size: var(--fs);
+}
+
+.container {
+  background-color: var(--container-color);
+  border-radius: 13px;
+  padding: 3em 5em;
+  min-width: 50%;
+  max-width: min-content;
+  margin: 5em auto;
+  text-align: center;
+  border: var(--contatiner-border-color);
+  border-style: solid;
+  box-shadow: var(--bs);
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+}
