@@ -20,16 +20,21 @@ export class CharactersTableComponent implements OnInit {
   }
 
   private adjustRows() {
-    this.rows.forEach((row) => {
+    this.rows.forEach((row, index) => {
       if (row.cells.length !== this.columns.length) {
         let rowColumns: string[] = row.cells.map((element) => element.column);
 
-        for (let i = 0; i < this.columns.length; i++) {
+        this.rows[index] = { row: row.row, cells: [] };
+
+        for (let i = 0, j = 0; i < this.columns.length; i++) {
           if (!rowColumns.includes(this.columns[i])) {
-            row.cells.splice(i, 0, {
+            this.rows[index].cells.push({
               column: this.columns[i],
               character: { character: '', transcription: '' },
             });
+          } else {
+            this.rows[index].cells.push(row.cells[j]);
+            j++;
           }
         }
       }
