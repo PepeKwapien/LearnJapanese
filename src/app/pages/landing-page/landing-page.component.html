@@ -1,22 +1,26 @@
 <div class="container">
   <h1>Learn Japanese</h1>
-  <p>
+  <div class="break"></div>
+  <p class="mt-2">
     This app was made to learn Japanese syllabaries. For now app offers a way to
     learn Hiragana (after I will learn Katakana it will also be added).
   </p>
-  <p>
+  <p class="mt-2">
     The main purpose of this app was to provide a way to rehearse Japanese
     characters in a random order, which is the best way to make me remember all
     of the Hiragana characters.
   </p>
+  <div class="break"></div>
   <div class="button-container">
     <app-navigation-button
       text="Hiragana"
       link="hiragana"
+      whichIcon="language"
     ></app-navigation-button>
     <app-navigation-button
       text="Katakana"
       [disabled]="true"
+      whichIcon="language"
     ></app-navigation-button>
   </div>
 </div>

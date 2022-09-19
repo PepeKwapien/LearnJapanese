@@ -6,15 +6,20 @@
     [diacritics]="diacritics"
     [description]="description"
   ></app-syllabary-page>
-  <app-button-with-icon
-    text="Learn"
-    (click)="toggleLearn()"
-  ></app-button-with-icon>
-  <app-button-with-icon
-    text="Practice"
-    (click)="togglePractice()"
-  ></app-button-with-icon>
-
+  <div class="break"></div>
+  <div class="button-container">
+    <app-button-with-icon
+      text="Learn"
+      whichIcon="learn"
+      (click)="toggleLearn()"
+    ></app-button-with-icon>
+    <app-button-with-icon
+      text="Practice"
+      whichIcon="practice"
+      (click)="togglePractice()"
+    ></app-button-with-icon>
+  </div>
+  <div class="break" *ngIf="showLearn || showPractice"></div>
   <div *ngIf="showLearn">
     <app-characters-table
       title="Monographs"

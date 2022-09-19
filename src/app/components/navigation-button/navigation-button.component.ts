@@ -9,6 +9,7 @@ export class NavigationButtonComponent implements OnInit {
   @Input() link: string = '';
   @Input() text: string = 'Click me';
   @Input() disabled: boolean = false;
+  @Input() whichIcon: string;
 
   constructor() {}
 

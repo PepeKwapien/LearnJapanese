@@ -1,6 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowRight,
+  faBook,
+  faFaceSmile,
+  faLanguage,
+  faPencil,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-button-with-icon',
@@ -10,9 +16,28 @@ import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 export class ButtonWithIconComponent implements OnInit {
   @Input() text: string = 'Click me';
   @Input() disabled: boolean = false;
-  @Input() icon: IconDefinition = faBookOpen;
+  @Input() whichIcon: string;
+  public icon: IconDefinition;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    switch (this.whichIcon) {
+      case 'language':
+        this.icon = faLanguage;
+        break;
+      case 'learn':
+        this.icon = faBook;
+        break;
+      case 'practice':
+        this.icon = faPencil;
+        break;
+      case 'next':
+        this.icon = faArrowRight;
+        break;
+      default:
+        this.icon = faFaceSmile;
+        break;
+    }
+  }
 }

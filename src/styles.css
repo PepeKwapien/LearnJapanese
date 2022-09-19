@@ -34,7 +34,7 @@ body {
 .container {
   background-color: var(--container-color);
   border-radius: 13px;
-  padding: 3em 5em;
+  padding: 3em 4em;
   min-width: 600px;
   max-width: 50%;
   margin: 5em auto;
@@ -47,4 +47,30 @@ body {
 h1 {
   font-size: 3em;
   margin: 0;
+}
+
+h2 {
+  font-size: 1.13em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.break {
+  height: 0.01em;
+  width: 75%;
+  margin: 1.25em auto;
+  background-color: var(--primary-color);
+}
+
+.mt-2 {
+  margin-top: 2em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }

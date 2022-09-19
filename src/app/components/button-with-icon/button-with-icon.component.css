@@ -1,4 +1,6 @@
 button {
+  display: flex;
+  justify-content: space-between;
   font-size: 1em;
   background-color: var(--contatiner-border-color);
   color: var(--primary-color);
@@ -6,15 +8,18 @@ button {
   border-color: var(--contatiner-border-color);
   padding: 0.75em 1em;
   border-radius: 10px;
+  min-width: 13ch;
 }
 
 button:hover {
   background-color: var(--primary-color);
   border-style: solid;
+  cursor: pointer;
   color: var(--contatiner-border-color);
 }
 
 button:disabled {
+  cursor: default;
   pointer-events: none;
   opacity: 50%;
 }
