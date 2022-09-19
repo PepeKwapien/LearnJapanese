@@ -35,8 +35,8 @@ body {
   background-color: var(--container-color);
   border-radius: 13px;
   padding: 3em 5em;
-  min-width: 50%;
-  max-width: min-content;
+  min-width: 600px;
+  max-width: 50%;
   margin: 5em auto;
   text-align: center;
   border: var(--contatiner-border-color);

@@ -1,42 +1,44 @@
-<app-syllabary-page
-  [syllabary]="syllabary"
-  [monographs]="monographs"
-  [digraphs]="digraphs"
-  [diacritics]="diacritics"
-  [description]="description"
-></app-syllabary-page>
-<app-button-with-icon
-  text="Learn"
-  (click)="toggleLearn()"
-></app-button-with-icon>
-<app-button-with-icon
-  text="Practice"
-  (click)="togglePractice()"
-></app-button-with-icon>
+<div class="container">
+  <app-syllabary-page
+    [syllabary]="syllabary"
+    [monographs]="monographs"
+    [digraphs]="digraphs"
+    [diacritics]="diacritics"
+    [description]="description"
+  ></app-syllabary-page>
+  <app-button-with-icon
+    text="Learn"
+    (click)="toggleLearn()"
+  ></app-button-with-icon>
+  <app-button-with-icon
+    text="Practice"
+    (click)="togglePractice()"
+  ></app-button-with-icon>
 
-<div *ngIf="showLearn">
-  <app-characters-table
-    title="Monographs"
-    [rows]="this.jss.getMonographs(syllabary)"
-    [columns]="this.jss.getMonographsColumns(syllabary)"
-  ></app-characters-table>
-  <app-characters-table
-    title="Digraphs"
-    [rows]="this.jss.getDigraphs(syllabary)"
-    [columns]="this.jss.getDigraphsColumns(syllabary)"
-  ></app-characters-table>
-  <app-characters-table
-    title="Diacritics"
-    [rows]="this.jss.getDiacritics(syllabary)"
-    [columns]="this.jss.getMonographsColumns(syllabary)"
-  ></app-characters-table>
-  <app-characters-table
-    title="Digraphs with diacritics"
-    [rows]="this.jss.getDigraphsWithDiacritics(syllabary)"
-    [columns]="this.jss.getDigraphsColumns(syllabary)"
-  ></app-characters-table>
+  <div *ngIf="showLearn">
+    <app-characters-table
+      title="Monographs"
+      [rows]="this.jss.getMonographs(syllabary)"
+      [columns]="this.jss.getMonographsColumns(syllabary)"
+    ></app-characters-table>
+    <app-characters-table
+      title="Digraphs"
+      [rows]="this.jss.getDigraphs(syllabary)"
+      [columns]="this.jss.getDigraphsColumns(syllabary)"
+    ></app-characters-table>
+    <app-characters-table
+      title="Diacritics"
+      [rows]="this.jss.getDiacritics(syllabary)"
+      [columns]="this.jss.getMonographsColumns(syllabary)"
+    ></app-characters-table>
+    <app-characters-table
+      title="Digraphs with diacritics"
+      [rows]="this.jss.getDigraphsWithDiacritics(syllabary)"
+      [columns]="this.jss.getDigraphsColumns(syllabary)"
+    ></app-characters-table>
+  </div>
+
+  <app-practice-form
+    [ngStyle]="{ display: showPractice ? 'block' : 'none' }"
+  ></app-practice-form>
 </div>
-
-<app-practice-form
-  [ngStyle]="{ display: showPractice ? 'block' : 'none' }"
-></app-practice-form>
