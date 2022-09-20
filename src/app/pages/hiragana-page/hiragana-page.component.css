@@ -1,3 +1,10 @@
 app-button-with-icon {
   margin: 0.35em 1em;
 }
+
+@media (min-width: 800px) {
+  .table-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

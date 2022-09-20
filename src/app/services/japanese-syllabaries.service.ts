@@ -35,8 +35,10 @@ import {
   wMonographs,
   yMonographs,
 } from '../data/hiragana-monographs';
+import { JapaneseDiacriticRows } from '../enums/japanese-diacritic-rows';
 import { JapaneseDigraphColumns } from '../enums/japanese-digraph-columns';
 import { JapaneseMonographColumns } from '../enums/japanese-monograph-columns';
+import { JapaneseMonographRows } from '../enums/japanese-monograph-rows';
 import { Syllabaries } from '../enums/syllabaries';
 import { JapaneseCharacterRow } from '../interfaces/japanese-characters-row';
 
@@ -157,6 +159,50 @@ export class JapaneseSyllabariesService {
       JapaneseDigraphColumns.ya,
       JapaneseDigraphColumns.yu,
       JapaneseDigraphColumns.yo,
+    ];
+  }
+
+  public getMonographsRows(syllabary: Syllabaries) {
+    switch (syllabary) {
+      case Syllabaries.hiragana:
+        return this.getHiraganaMonographsRows();
+      case Syllabaries.katakana:
+        return [];
+    }
+  }
+
+  private getHiraganaMonographsRows() {
+    return [
+      JapaneseMonographRows.empty,
+      JapaneseMonographRows.k,
+      JapaneseMonographRows.s,
+      JapaneseMonographRows.t,
+      JapaneseMonographRows.n,
+      JapaneseMonographRows.h,
+      JapaneseMonographRows.m,
+      JapaneseMonographRows.y,
+      JapaneseMonographRows.r,
+      JapaneseMonographRows.w,
+      JapaneseMonographRows.mn,
+    ];
+  }
+
+  public getDiacriticsRows(syllabary: Syllabaries) {
+    switch (syllabary) {
+      case Syllabaries.hiragana:
+        return this.getHiraganaDiacriticsRows();
+      case Syllabaries.katakana:
+        return [];
+    }
+  }
+
+  private getHiraganaDiacriticsRows() {
+    return [
+      JapaneseDiacriticRows.g,
+      JapaneseDiacriticRows.z,
+      JapaneseDiacriticRows.d,
+      JapaneseDiacriticRows.b,
+      JapaneseDiacriticRows.p,
     ];
   }
 }

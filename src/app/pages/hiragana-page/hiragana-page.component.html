@@ -20,29 +20,29 @@
     ></app-button-with-icon>
   </div>
   <div class="break" *ngIf="showLearn || showPractice"></div>
-  <div *ngIf="showLearn">
+  <div *ngIf="showLearn" class="table-container">
     <app-characters-table
-      class="mt-8"
       title="Monographs"
-      [rows]="this.jss.getMonographs(syllabary)"
+      [tableRows]="this.jss.getMonographs(syllabary)"
+      [rows]="this.jss.getMonographsRows(syllabary)"
       [columns]="this.jss.getMonographsColumns(syllabary)"
     ></app-characters-table>
     <app-characters-table
-      class="mt-8"
       title="Digraphs"
-      [rows]="this.jss.getDigraphs(syllabary)"
+      [tableRows]="this.jss.getDigraphs(syllabary)"
+      [rows]="this.jss.getMonographsRows(syllabary)"
       [columns]="this.jss.getDigraphsColumns(syllabary)"
     ></app-characters-table>
     <app-characters-table
-      class="mt-8"
       title="Diacritics"
-      [rows]="this.jss.getDiacritics(syllabary)"
+      [tableRows]="this.jss.getDiacritics(syllabary)"
+      [rows]="this.jss.getDiacriticsRows(syllabary)"
       [columns]="this.jss.getMonographsColumns(syllabary)"
     ></app-characters-table>
     <app-characters-table
-      class="mt-8"
       title="Digraphs with diacritics"
-      [rows]="this.jss.getDigraphsWithDiacritics(syllabary)"
+      [tableRows]="this.jss.getDigraphsWithDiacritics(syllabary)"
+      [rows]="this.jss.getDiacriticsRows(syllabary)"
       [columns]="this.jss.getDigraphsColumns(syllabary)"
     ></app-characters-table>
   </div>

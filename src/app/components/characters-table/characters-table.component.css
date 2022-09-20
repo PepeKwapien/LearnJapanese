@@ -1,6 +1,7 @@
 table {
   min-width: 50%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -29,12 +30,12 @@ app-characters-table-cell {
 }
 
 td {
-  position: relative;
   background-color: var(--bg-color);
   min-width: 3em;
+  height: 9em;
 }
 
-div {
+.cell-break {
   position: relative;
   margin: 0 auto;
   height: 2px;
@@ -44,9 +45,13 @@ div {
 }
 
 .japanese {
-  font-size: 1.25em;
+  font-size: 1.45em;
 }
 
 .no-border {
   border-style: none;
+}
+
+h2 {
+  margin: 2.5em 0 1em 0;
 }

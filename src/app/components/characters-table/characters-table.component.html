@@ -1,25 +1,31 @@
-<h2>{{ title }}</h2>
-<table>
-  <thead>
-    <tr>
-      <th *ngFor="let column of [' '].concat(columns)">{{ column }}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let row of rows">
-      <td class="first-column">
-        {{ row.row }}
-      </td>
-      <td
-        *ngFor="let cell of row.cells"
-        [ngClass]="{ 'no-border': !cell.character.character }"
+<div>
+  <h2>{{ title }}</h2>
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let column of [' '].concat(columns)">{{ column }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let row of tableRows"
+        [ngClass]="{ hideRowInSmallScreen: this.isRowEmpty(row) }"
       >
-        <p class="japanese">{{ cell.character.character }}</p>
-        <div
-          [ngStyle]="{ display: cell.character.character ? 'block' : 'none' }"
-        ></div>
-        <p>{{ cell.character.transcription }}</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+        <td class="first-column">
+          {{ row.row }}
+        </td>
+        <td
+          *ngFor="let cell of row.cells"
+          [ngClass]="{ 'no-border': !cell.character.character }"
+        >
+          <p class="japanese">{{ cell.character.character }}</p>
+          <div
+            class="cell-break"
+            [ngStyle]="{ display: cell.character.character ? 'block' : 'none' }"
+          ></div>
+          <p>{{ cell.character.transcription }}</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
