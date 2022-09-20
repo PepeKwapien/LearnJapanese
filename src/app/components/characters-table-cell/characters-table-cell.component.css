@@ -1,0 +1,11 @@
+.japanese {
+  font-size: 1.25em;
+}
+div {
+  height: 100%;
+}
+
+p {
+  height: 50%;
+  border: 1px solid var(--contatiner-border-color);
+}

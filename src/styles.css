@@ -68,6 +68,10 @@ a {
   margin-top: 2em;
 }
 
+.mt-8 {
+  margin-top: 8em;
+}
+
 .button-container {
   display: flex;
   justify-content: center;

@@ -22,21 +22,25 @@
   <div class="break" *ngIf="showLearn || showPractice"></div>
   <div *ngIf="showLearn">
     <app-characters-table
+      class="mt-8"
       title="Monographs"
       [rows]="this.jss.getMonographs(syllabary)"
       [columns]="this.jss.getMonographsColumns(syllabary)"
     ></app-characters-table>
     <app-characters-table
+      class="mt-8"
       title="Digraphs"
       [rows]="this.jss.getDigraphs(syllabary)"
       [columns]="this.jss.getDigraphsColumns(syllabary)"
     ></app-characters-table>
     <app-characters-table
+      class="mt-8"
       title="Diacritics"
       [rows]="this.jss.getDiacritics(syllabary)"
       [columns]="this.jss.getMonographsColumns(syllabary)"
     ></app-characters-table>
     <app-characters-table
+      class="mt-8"
       title="Digraphs with diacritics"
       [rows]="this.jss.getDigraphsWithDiacritics(syllabary)"
       [columns]="this.jss.getDigraphsColumns(syllabary)"
