@@ -9,8 +9,15 @@
     [mode]="getMode()"
   ></app-practice-module-character>
   <app-button-with-icon
+    *ngIf="characterCountUpToNow + 1 < numberOfCharacters"
     (click)="nextCharacter()"
     whichIcon="next"
     text="Next"
   ></app-button-with-icon>
+  <app-navigation-button
+    *ngIf="!(characterCountUpToNow + 1 < numberOfCharacters)"
+    text="Go back"
+    [link]="linkBack()"
+    whichIcon="language"
+  ></app-navigation-button>
 </div>

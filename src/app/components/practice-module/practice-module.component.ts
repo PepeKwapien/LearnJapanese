@@ -102,4 +102,12 @@ export class PracticeModuleComponent implements OnInit {
   getMode(): PracticeModes {
     return this.model.mode ?? PracticeModes.characters;
   }
+
+  linkBack() {
+    if (this.syllabary === Syllabaries.hiragana) {
+      return '/hiragana';
+    } else {
+      return '/katakana';
+    }
+  }
 }
