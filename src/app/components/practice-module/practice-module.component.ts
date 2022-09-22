@@ -20,6 +20,7 @@ export class PracticeModuleComponent implements OnInit {
   private currentCharacterIndex: number;
   private model: PracticeFormModel;
   public currentCharacter: JapaneseCharacter;
+  public whichCharacters: string[] = [];
 
   constructor(
     public practice: PracticeService,
@@ -31,21 +32,25 @@ export class PracticeModuleComponent implements OnInit {
 
     let characterRows: JapaneseCharacterRow[] = [];
     if (this.model.monographs) {
+      this.whichCharacters.push('Monographs');
       characterRows = characterRows.concat(
         this.jss.getMonographs(this.syllabary)
       );
     }
     if (this.model.digraphs) {
+      this.whichCharacters.push('Digraphs');
       characterRows = characterRows.concat(
         this.jss.getDigraphs(this.syllabary)
       );
     }
     if (this.model.diacritics) {
+      this.whichCharacters.push('Diacritics');
       characterRows = characterRows.concat(
         this.jss.getDiacritics(this.syllabary)
       );
     }
     if (this.model.digraphsdiacritics) {
+      this.whichCharacters.push('Digraphs with diacritics');
       characterRows = characterRows.concat(
         this.jss.getDigraphsWithDiacritics(this.syllabary)
       );
@@ -60,6 +65,17 @@ export class PracticeModuleComponent implements OnInit {
     this.characterCountUpToNow = 0;
 
     this.pickNextRandomCharacter();
+  }
+
+  public whatAmIPracticing(): string {
+    if ((this, this.whichCharacters.length > 1)) {
+      let result = this.whichCharacters.slice(0, -1).join(', ');
+      return (
+        result + ` and ${this.whichCharacters[this.whichCharacters.length - 1]}`
+      );
+    }
+
+    return this.whichCharacters[0];
   }
 
   private getRandomInt(max: number) {

@@ -1,9 +1,14 @@
-<p>{{ characterCountUpToNow + 1 }}/{{ numberOfCharacters }}</p>
-<app-practice-module-character
-  [character]="currentCharacter"
-  [mode]="getMode()"
-></app-practice-module-character>
-<app-button-with-icon
-  (click)="nextCharacter()"
-  text="Next"
-></app-button-with-icon>
+<div class="entire-module">
+  <h1>{{ syllabary }}</h1>
+  <p>You are practicing:</p>
+  <p>{{ this.whatAmIPracticing() }}</p>
+  <p class="count">{{ characterCountUpToNow + 1 }}/{{ numberOfCharacters }}</p>
+  <app-practice-module-character
+    [character]="currentCharacter"
+    [mode]="getMode()"
+  ></app-practice-module-character>
+  <app-button-with-icon
+    (click)="nextCharacter()"
+    text="Next"
+  ></app-button-with-icon>
+</div>
