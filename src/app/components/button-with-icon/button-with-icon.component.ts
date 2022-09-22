@@ -5,6 +5,7 @@ import {
   faBook,
   faFaceSmile,
   faLanguage,
+  faPaperPlane,
   faPencil,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -34,6 +35,9 @@ export class ButtonWithIconComponent implements OnInit {
         break;
       case 'next':
         this.icon = faArrowRight;
+        break;
+      case 'send':
+        this.icon = faPaperPlane;
         break;
       default:
         this.icon = faFaceSmile;

@@ -1,79 +1,95 @@
 <form (ngSubmit)="onSubmit()">
-  <p>What would you like to practice?</p>
-  <p *ngIf="displayModeError">Choose practice mode!</p>
-  <div>
-    <input
-      type="radio"
-      name="mode"
-      id="characters"
-      [(ngModel)]="model.mode"
-      (ngModelChange)="clearModeError()"
-      [value]="practiceModes.characters"
-    />
-    <label for="characters">Characters</label>
+  <h3>What would you like to practice?</h3>
+  <p class="error-message" *ngIf="displayModeError">Choose practice mode!</p>
+  <div class="radio-buttons">
+    <div class="radio-button">
+      <input
+        type="radio"
+        name="mode"
+        id="characters"
+        [(ngModel)]="model.mode"
+        (ngModelChange)="clearModeError()"
+        [value]="practiceModes.characters"
+      />
+      <label for="characters">Characters</label>
+    </div>
+    <div class="radio-button">
+      <input
+        type="radio"
+        name="mode"
+        id="transcription"
+        [(ngModel)]="model.mode"
+        (ngModelChange)="clearModeError()"
+        [value]="practiceModes.transcription"
+      />
+      <label for="transcription">Transcription</label>
+    </div>
+    <div class="radio-button">
+      <input
+        type="radio"
+        name="mode"
+        id="both"
+        [(ngModel)]="model.mode"
+        (ngModelChange)="clearModeError()"
+        [value]="practiceModes.both"
+      />
+      <label for="both">Both</label>
+    </div>
   </div>
-  <div>
-    <input
-      type="radio"
-      name="mode"
-      id="transcription"
-      [(ngModel)]="model.mode"
-      (ngModelChange)="clearModeError()"
-      [value]="practiceModes.transcription"
-    />
-    <label for="transcription">Transcription</label>
+  <h3>Include:</h3>
+  <div class="checkboxes">
+    <label class="checkbox-container" for="monographs"
+      >Monographs
+      <input
+        type="checkbox"
+        name="monographs"
+        id="monographs"
+        [(ngModel)]="model.monographs"
+        (ngModelChange)="clearIncludeError()"
+      />
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="checkbox-container" for="digraphs"
+      >Digraphs
+      <input
+        type="checkbox"
+        name="digraphs"
+        id="digraphs"
+        [(ngModel)]="model.digraphs"
+        (ngModelChange)="clearIncludeError()"
+      />
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="checkbox-container" for="diacritics"
+      >Diacritics
+      <input
+        type="checkbox"
+        name="diacritics"
+        id="diacritics"
+        [(ngModel)]="model.diacritics"
+        (ngModelChange)="clearIncludeError()"
+      />
+      <span class="checkmark"></span>
+    </label>
+
+    <label class="checkbox-container" for="digraphsdiacritics"
+      >Digraphs with diacritics
+      <input
+        type="checkbox"
+        name="digraphsdiacritics"
+        id="digraphsdiacritics"
+        [(ngModel)]="model.digraphsdiacritics"
+        (ngModelChange)="clearIncludeError()"
+      />
+      <span class="checkmark"></span>
+    </label>
   </div>
-  <div>
-    <input
-      type="radio"
-      name="mode"
-      id="both"
-      [(ngModel)]="model.mode"
-      (ngModelChange)="clearModeError()"
-      [value]="practiceModes.both"
-    />
-    <label for="both">Both</label>
+  <p class="error-message" *ngIf="displayIncludeError">
+    Include at least one type of characters!
+  </p>
+  <div class="margin-helper">
+    <app-button-with-icon whichIcon="send" text="Start"></app-button-with-icon>
   </div>
-  <div>
-    <label for="monographs">Include monographs: </label>
-    <input
-      type="checkbox"
-      name="monographs"
-      id="monographs"
-      [(ngModel)]="model.monographs"
-      (ngModelChange)="clearIncludeError()"
-    />
-  </div>
-  <div>
-    <label for="digraphs">Include digraphs: </label>
-    <input
-      type="checkbox"
-      name="digraphs"
-      id="digraphs"
-      [(ngModel)]="model.digraphs"
-      (ngModelChange)="clearIncludeError()"
-    />
-  </div>
-  <div>
-    <label for="diacritics">Include diacritics: </label>
-    <input
-      type="checkbox"
-      name="diacritics"
-      id="diacritics"
-      [(ngModel)]="model.diacritics"
-      (ngModelChange)="clearIncludeError()"
-    />
-  </div>
-  <div>
-    <label for="digraphsdiacritics">Include digraphs with diacritics: </label>
-    <input
-      type="checkbox"
-      name="digraphsdiacritics"
-      id="digraphsdiacritics"
-      [(ngModel)]="model.digraphsdiacritics"
-      (ngModelChange)="clearIncludeError()"
-    />
-  </div>
-  <p *ngIf="displayIncludeError">Include at least one type of characters!</p>
-  <input type="submit" value="Start" />
 </form>
