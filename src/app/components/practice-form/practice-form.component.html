@@ -2,7 +2,8 @@
   <h3>What would you like to practice?</h3>
   <p class="error-message" *ngIf="displayModeError">Choose practice mode!</p>
   <div class="radio-buttons">
-    <div class="radio-button">
+    <label class="radio-container" for="characters"
+      >Characters
       <input
         type="radio"
         name="mode"
@@ -11,9 +12,11 @@
         (ngModelChange)="clearModeError()"
         [value]="practiceModes.characters"
       />
-      <label for="characters">Characters</label>
-    </div>
-    <div class="radio-button">
+      <span class="radio-checkmark"></span>
+    </label>
+
+    <label class="radio-container" for="transcription"
+      >Transcription
       <input
         type="radio"
         name="mode"
@@ -22,9 +25,11 @@
         (ngModelChange)="clearModeError()"
         [value]="practiceModes.transcription"
       />
-      <label for="transcription">Transcription</label>
-    </div>
-    <div class="radio-button">
+      <span class="radio-checkmark"></span>
+    </label>
+
+    <label class="radio-container" for="both"
+      >Both
       <input
         type="radio"
         name="mode"
@@ -33,8 +38,8 @@
         (ngModelChange)="clearModeError()"
         [value]="practiceModes.both"
       />
-      <label for="both">Both</label>
-    </div>
+      <span class="radio-checkmark"></span>
+    </label>
   </div>
   <h3>Include:</h3>
   <div class="checkboxes">
