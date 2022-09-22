@@ -85,23 +85,23 @@ export const bDiacritics: JapaneseCharacterRow = {
   cells: [
     {
       column: JapaneseMonographColumns.a,
-      character: { transcription: 'a', character: 'ば' },
+      character: { transcription: 'ba', character: 'ば' },
     },
     {
       column: JapaneseMonographColumns.i,
-      character: { transcription: 'i', character: 'び' },
+      character: { transcription: 'bi', character: 'び' },
     },
     {
       column: JapaneseMonographColumns.u,
-      character: { transcription: 'u', character: 'ぶ' },
+      character: { transcription: 'bu', character: 'ぶ' },
     },
     {
       column: JapaneseMonographColumns.e,
-      character: { transcription: 'e', character: 'べ' },
+      character: { transcription: 'be', character: 'べ' },
     },
     {
       column: JapaneseMonographColumns.o,
-      character: { transcription: 'o', character: 'ぼ' },
+      character: { transcription: 'bo', character: 'ぼ' },
     },
   ],
 };
