@@ -1,0 +1,25 @@
+p {
+  display: block;
+  width: 15%;
+  margin: 0 auto;
+  padding: 1em 0.5em;
+  font-size: 2em;
+}
+
+.question {
+  background-color: var(--primary-color);
+  color: var(--contatiner-border-color);
+  border-radius: 50% 50% 0 0;
+  border: 4px solid var(--contatiner-border-color);
+  border-bottom: 0;
+}
+
+.answer {
+  background-color: var(--contatiner-border-color);
+  color: var(--primary-color);
+  border-radius: 0 0 50% 50%;
+}
+
+.answer-holder {
+  height: 7em;
+}

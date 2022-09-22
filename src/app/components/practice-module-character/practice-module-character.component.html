@@ -1,9 +1,12 @@
 <div>
-  <p>{{ question }}</p>
-  <app-button-with-icon
-    *ngIf="!showAnswer"
-    text="Show answer"
-    (click)="onShowAnswer()"
-  ></app-button-with-icon>
-  <p *ngIf="showAnswer">{{ answer }}</p>
+  <p class="question">{{ question }}</p>
+  <div class="answer-holder">
+    <app-button-with-icon
+      *ngIf="!showAnswer"
+      text="Show"
+      whichIcon="lightbulb"
+      (click)="onShowAnswer()"
+    ></app-button-with-icon>
+    <p class="answer" *ngIf="showAnswer">{{ answer }}</p>
+  </div>
 </div>

@@ -1,5 +1,6 @@
 <div class="entire-module">
   <h1>{{ syllabary }}</h1>
+  <div class="break"></div>
   <p>You are practicing:</p>
   <p>{{ this.whatAmIPracticing() }}</p>
   <p class="count">{{ characterCountUpToNow + 1 }}/{{ numberOfCharacters }}</p>
@@ -9,6 +10,7 @@
   ></app-practice-module-character>
   <app-button-with-icon
     (click)="nextCharacter()"
+    whichIcon="next"
     text="Next"
   ></app-button-with-icon>
 </div>
