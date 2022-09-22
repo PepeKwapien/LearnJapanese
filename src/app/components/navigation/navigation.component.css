@@ -1,0 +1,20 @@
+div {
+  position: fixed;
+  padding: 0.5em;
+  top: 0;
+  left: 0;
+}
+
+fa-icon {
+  margin: 0 0.3em;
+  font-size: 1.5em;
+}
+
+a:visited {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--contatiner-border-color);
+}
