@@ -12,12 +12,14 @@ p {
   border-radius: 50% 50% 0 0;
   border: 4px solid var(--contatiner-border-color);
   border-bottom: 0;
+  min-width: 5ch;
 }
 
 .answer {
   background-color: var(--contatiner-border-color);
   color: var(--primary-color);
   border-radius: 0 0 50% 50%;
+  min-width: 5ch;
 }
 
 .answer-holder {

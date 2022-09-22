@@ -4,6 +4,7 @@
 
 .count {
   position: absolute;
+  margin: 0;
   top: 0;
-  left: calc(100% - 1em);
+  left: calc(100% - 2rem);
 }

@@ -1,5 +1,12 @@
 h3 {
   text-decoration: underline;
+  font-size: 0.95em;
+}
+
+@media (min-width: 800px) {
+  h3 {
+    font-size: 1.35em;
+  }
 }
 
 .error-message {
@@ -32,8 +39,8 @@ h3 {
 .checkbox-container {
   cursor: pointer;
   position: relative;
-  margin: 0.2em 10px;
-  padding-right: 15px;
+  margin: 0.2rem 0.5rem;
+  padding-right: 1.2rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -52,8 +59,8 @@ h3 {
   position: absolute;
   top: -0.15em;
   left: 90%;
-  height: 25px;
-  width: 25px;
+  height: 1.25rem;
+  width: 1.25rem;
   background-color: #eee;
 }
 
@@ -76,12 +83,12 @@ h3 {
 }
 
 .checkbox-container .checkmark:after {
-  left: 8px;
-  top: 2px;
-  width: 10px;
-  height: 15px;
+  left: 0.35rem;
+  top: 0.08rem;
+  width: 0.6rem;
+  height: 0.9rem;
   border: solid white;
-  border-width: 0 5px 5px 0;
+  border-width: 0 0.3rem 0.3rem 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -92,8 +99,8 @@ h3 {
 .radio-container {
   cursor: pointer;
   position: relative;
-  margin: 0.2em 10px;
-  padding-left: 30px;
+  margin: 0.2rem 0.5rem;
+  padding-left: 1.2rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -110,10 +117,11 @@ h3 {
 
 .radio-checkmark {
   position: absolute;
-  top: -0.08em;
+  margin: auto;
+  top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 1rem;
+  width: 1rem;
   background-color: #eee;
   border-radius: 50%;
 }
@@ -137,10 +145,10 @@ h3 {
 }
 
 .radio-container .radio-checkmark:after {
-  top: 2.5px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
+  top: 0.1rem;
+  left: 0.1rem;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
   background: #1ed239;
 }
