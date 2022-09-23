@@ -1,5 +1,6 @@
 .character-information-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   height: min-content;
   margin-top: 0;

@@ -12,11 +12,13 @@ button {
   min-width: 13ch;
 }
 
-button:hover {
-  background-color: var(--primary-color);
-  border-style: solid;
-  cursor: pointer;
-  color: var(--contatiner-border-color);
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    background-color: var(--primary-color);
+    border-style: solid;
+    cursor: pointer;
+    color: var(--contatiner-border-color);
+  }
 }
 
 button:disabled {
