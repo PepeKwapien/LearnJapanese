@@ -1,6 +1,6 @@
-import { JapaneseDigraphColumns } from '../enums/japanese-digraph-columns';
-import { JapaneseMonographRows } from '../enums/japanese-monograph-rows';
-import { JapaneseCharacterRow } from '../interfaces/japanese-characters-row';
+import { JapaneseDigraphColumns } from 'src/app/enums/japanese-digraph-columns';
+import { JapaneseMonographRows } from 'src/app/enums/japanese-monograph-rows';
+import { JapaneseCharacterRow } from 'src/app/interfaces/japanese-characters-row';
 
 export const kDigraphs: JapaneseCharacterRow = {
   row: JapaneseMonographRows.k,

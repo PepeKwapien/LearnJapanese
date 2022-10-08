@@ -5,7 +5,7 @@ import {
   dDiacritics,
   bDiacritics,
   pDiacritics,
-} from '../data/hiragana-diacritics';
+} from 'src/app/data/hiragana/hiragana-diacritics';
 import {
   kDigraphs,
   sDigraphs,
@@ -14,14 +14,14 @@ import {
   hDigraphs,
   mDigraphs,
   rDigraphs,
-} from '../data/hiragana-digraphs';
+} from 'src/app/data/hiragana/hiragana-digraphs';
 import {
   gDigraphsDiacritics,
   zDigraphsDiacritics,
   dDigraphsDiacritics,
   bDigraphsDiacritics,
   pDigraphsDiacritics,
-} from '../data/hiragana-digraphs-diacritics';
+} from 'src/app/data/hiragana/hiragana-digraphs-diacritics';
 import {
   emptyMonographs,
   hMonographs,
@@ -34,7 +34,7 @@ import {
   tMonographs,
   wMonographs,
   yMonographs,
-} from '../data/hiragana-monographs';
+} from '../data/hiragana/hiragana-monographs';
 import { JapaneseDiacriticRows } from '../enums/japanese-diacritic-rows';
 import { JapaneseDigraphColumns } from '../enums/japanese-digraph-columns';
 import { JapaneseMonographColumns } from '../enums/japanese-monograph-columns';

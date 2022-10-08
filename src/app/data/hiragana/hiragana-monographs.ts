@@ -1,6 +1,6 @@
-import { JapaneseMonographColumns } from '../enums/japanese-monograph-columns';
-import { JapaneseMonographRows } from '../enums/japanese-monograph-rows';
-import { JapaneseCharacterRow } from '../interfaces/japanese-characters-row';
+import { JapaneseMonographColumns } from 'src/app/enums/japanese-monograph-columns';
+import { JapaneseMonographRows } from 'src/app/enums/japanese-monograph-rows';
+import { JapaneseCharacterRow } from 'src/app/interfaces/japanese-characters-row';
 
 export const emptyMonographs: JapaneseCharacterRow = {
   row: JapaneseMonographRows.empty,
