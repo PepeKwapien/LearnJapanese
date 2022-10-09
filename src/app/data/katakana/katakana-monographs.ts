@@ -53,3 +53,55 @@ export const kMonographs: JapaneseCharacterRow = {
     },
   ],
 };
+
+export const sMonographs: JapaneseCharacterRow = {
+  row: JapaneseMonographRows.s,
+  cells: [
+    {
+      column: JapaneseMonographColumns.a,
+      character: { transcription: 'sa', character: 'サ' },
+    },
+    {
+      column: JapaneseMonographColumns.i,
+      character: { transcription: 'shi', character: 'シ' },
+    },
+    {
+      column: JapaneseMonographColumns.u,
+      character: { transcription: 'su', character: 'ス' },
+    },
+    {
+      column: JapaneseMonographColumns.e,
+      character: { transcription: 'se', character: 'セ' },
+    },
+    {
+      column: JapaneseMonographColumns.o,
+      character: { transcription: 'so', character: 'ソ' },
+    },
+  ],
+};
+
+export const tMonographs: JapaneseCharacterRow = {
+  row: JapaneseMonographRows.t,
+  cells: [
+    {
+      column: JapaneseMonographColumns.a,
+      character: { transcription: 'ta', character: 'タ' },
+    },
+    {
+      column: JapaneseMonographColumns.i,
+      character: { transcription: 'chi', character: 'チ' },
+    },
+    {
+      column: JapaneseMonographColumns.u,
+      character: { transcription: 'tsu', character: 'ツ' },
+    },
+    {
+      column: JapaneseMonographColumns.e,
+      character: { transcription: 'te', character: 'テ' },
+    },
+    {
+      column: JapaneseMonographColumns.o,
+      character: { transcription: 'to', character: 'ト' },
+    },
+  ],
+};
