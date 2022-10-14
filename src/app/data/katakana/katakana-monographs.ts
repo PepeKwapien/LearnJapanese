@@ -105,3 +105,55 @@ export const tMonographs: JapaneseCharacterRow = {
     },
   ],
 };
+
+export const nMonographs: JapaneseCharacterRow = {
+  row: JapaneseMonographRows.n,
+  cells: [
+    {
+      column: JapaneseMonographColumns.a,
+      character: { transcription: 'na', character: 'ナ' },
+    },
+    {
+      column: JapaneseMonographColumns.i,
+      character: { transcription: 'ni', character: 'ニ' },
+    },
+    {
+      column: JapaneseMonographColumns.u,
+      character: { transcription: 'nu', character: 'ヌ' },
+    },
+    {
+      column: JapaneseMonographColumns.e,
+      character: { transcription: 'ne', character: 'ネ' },
+    },
+    {
+      column: JapaneseMonographColumns.o,
+      character: { transcription: 'no', character: 'ノ' },
+    },
+  ],
+};
+
+export const hMonographs: JapaneseCharacterRow = {
+  row: JapaneseMonographRows.h,
+  cells: [
+    {
+      column: JapaneseMonographColumns.a,
+      character: { transcription: 'ha', character: 'ハ' },
+    },
+    {
+      column: JapaneseMonographColumns.i,
+      character: { transcription: 'hi', character: 'ヒ' },
+    },
+    {
+      column: JapaneseMonographColumns.u,
+      character: { transcription: 'fu', character: 'フ' },
+    },
+    {
+      column: JapaneseMonographColumns.e,
+      character: { transcription: 'he', character: 'ヘ' },
+    },
+    {
+      column: JapaneseMonographColumns.o,
+      character: { transcription: 'ho', character: 'ホ' },
+    },
+  ],
+};
