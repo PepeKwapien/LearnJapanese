@@ -1,0 +1,15 @@
+export enum KatakanaExtendedRows {
+  y = 'y',
+  w = 'w',
+  v = 'v',
+  sh = 'sh',
+  j = 'j',
+  ch = 'ch',
+  t = 't',
+  ty = 'ty',
+  d = 'd',
+  dy = 'dyu',
+  ts = 'ts',
+  f = 'f',
+  fy = 'fy',
+}
