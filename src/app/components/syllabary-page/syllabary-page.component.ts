@@ -7,9 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SyllabaryPageComponent implements OnInit {
   @Input() syllabary: string = 'Syllabary';
-  @Input() monographs: number = 0;
-  @Input() digraphs: number = 0;
-  @Input() diacritics: number = 0;
   @Input() description: string = '';
 
   constructor() {}

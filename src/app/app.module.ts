@@ -17,6 +17,7 @@ import { PracticeModuleComponent } from './components/practice-module/practice-m
 import { PracticeHiraganaPageComponent } from './pages/practice-hiragana-page/practice-hiragana-page.component';
 import { PracticeModuleCharacterComponent } from './components/practice-module-character/practice-module-character.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { KatakanaPageComponent } from './pages/katakana-page/katakana-page.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     PracticeHiraganaPageComponent,
     PracticeModuleCharacterComponent,
     NavigationComponent,
+    KatakanaPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, FormsModule],
   providers: [],

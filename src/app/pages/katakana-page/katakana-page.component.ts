@@ -3,14 +3,14 @@ import { Syllabaries } from 'src/app/enums/syllabaries';
 import { JapaneseSyllabariesService } from 'src/app/services/japanese-syllabaries.service';
 
 @Component({
-  selector: 'app-hiragana-page',
-  templateUrl: './hiragana-page.component.html',
-  styleUrls: ['./hiragana-page.component.css'],
+  selector: 'app-katakana-page',
+  templateUrl: './katakana-page.component.html',
+  styleUrls: ['./katakana-page.component.css'],
 })
-export class HiraganaPageComponent implements OnInit {
-  syllabary: Syllabaries = Syllabaries.hiragana;
+export class KatakanaPageComponent implements OnInit {
+  syllabary: Syllabaries = Syllabaries.katakana;
   description: string =
-    'It is a phonetic lettering system. The word hiragana literally means "flowing" or "simple" kana ("simple" originally as contrasted with kanji).';
+    'The word katakana means "fragmentary kana", as the katakana characters are derived from components or fragments of more complex kanji.';
 
   showLearn = false;
   showPractice = false;
