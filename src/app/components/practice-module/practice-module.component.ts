@@ -55,6 +55,12 @@ export class PracticeModuleComponent implements OnInit {
         this.jss.getDigraphsWithDiacritics(this.syllabary)
       );
     }
+    if (this.model.extended) {
+      this.whichCharacters.push('Extended');
+      characterRows = characterRows.concat(
+        this.jss.getKatakanaExtendedCharacters()
+      );
+    }
 
     this.characters = characterRows
       .map((element) => element.cells)

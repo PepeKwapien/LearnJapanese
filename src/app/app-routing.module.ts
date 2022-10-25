@@ -4,6 +4,7 @@ import { HiraganaPageComponent } from './pages/hiragana-page/hiragana-page.compo
 import { KatakanaPageComponent } from './pages/katakana-page/katakana-page.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { PracticeHiraganaPageComponent } from './pages/practice-hiragana-page/practice-hiragana-page.component';
+import { PracticeKatakanaPageComponent } from './pages/practice-katakana-page/practice-katakana-page.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,11 @@ const routes: Routes = [
     path: 'katakana',
     title: 'Learn Japanese - Katakana',
     component: KatakanaPageComponent,
+  },
+  {
+    path: 'katakana/practice',
+    title: 'Learn Japanese - Katakana',
+    component: PracticeKatakanaPageComponent,
   },
 ];
 

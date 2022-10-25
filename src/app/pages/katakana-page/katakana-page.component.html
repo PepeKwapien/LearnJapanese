@@ -43,9 +43,16 @@
       [rows]="this.jss.getDiacriticsRows()"
       [columns]="this.jss.getDigraphsColumns()"
     ></app-characters-table>
+    <app-characters-table
+      title="Extended characters"
+      [tableRows]="this.jss.getKatakanaExtendedCharacters()"
+      [rows]="this.jss.getKatakanaExtendedRows()"
+      [columns]="this.jss.getMonographsColumns()"
+    ></app-characters-table>
   </div>
 
   <app-practice-form
     [ngStyle]="{ display: showPractice ? 'block' : 'none' }"
+    [syllabary]="syllabary"
   ></app-practice-form>
 </div>

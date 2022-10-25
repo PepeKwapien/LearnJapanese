@@ -3,6 +3,7 @@ import { JapaneseDiacriticRows } from 'src/app/enums/japanese-diacritic-rows';
 import { JapaneseDigraphColumns } from 'src/app/enums/japanese-digraph-columns';
 import { JapaneseMonographColumns } from 'src/app/enums/japanese-monograph-columns';
 import { JapaneseMonographRows } from 'src/app/enums/japanese-monograph-rows';
+import { KatakanaExtendedRows } from 'src/app/enums/katakana-extended-rows';
 import { JapaneseCharacterRow } from 'src/app/interfaces/japanese-characters-row';
 
 @Component({
@@ -14,7 +15,11 @@ export class CharactersTableComponent implements OnInit {
   @Input() title: string = 'Syllabary';
   @Input() tableRows: JapaneseCharacterRow[] = [];
   @Input() columns: (JapaneseMonographColumns | JapaneseDigraphColumns)[] = [];
-  @Input() rows: (JapaneseMonographRows | JapaneseDiacriticRows)[] = [];
+  @Input() rows: (
+    | JapaneseMonographRows
+    | JapaneseDiacriticRows
+    | KatakanaExtendedRows
+  )[] = [];
 
   constructor() {}
 

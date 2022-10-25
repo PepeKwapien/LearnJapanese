@@ -90,6 +90,20 @@
       />
       <span class="checkmark"></span>
     </label>
+    <label
+      class="checkbox-container"
+      for="extended"
+      *ngIf="syllabary === 'Katakana'"
+      >Extended
+      <input
+        type="checkbox"
+        name="extended"
+        id="extended"
+        [(ngModel)]="model.extended"
+        (ngModelChange)="clearIncludeError()"
+      />
+      <span class="checkmark"></span>
+    </label>
   </div>
   <p class="error-message" *ngIf="displayIncludeError">
     Include at least one type of characters!

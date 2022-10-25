@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PracticeModes } from 'src/app/enums/practice-modes';
+import { Syllabaries } from 'src/app/enums/syllabaries';
 import { PracticeFormModel } from 'src/app/interfaces/practice-form-model';
 import { PracticeService } from 'src/app/services/practice.service';
 
@@ -10,6 +11,8 @@ import { PracticeService } from 'src/app/services/practice.service';
   styleUrls: ['./practice-form.component.css'],
 })
 export class PracticeFormComponent implements OnInit {
+  @Input() syllabary: Syllabaries;
+
   model: PracticeFormModel;
   practiceModes = PracticeModes;
 
@@ -43,13 +46,14 @@ export class PracticeFormComponent implements OnInit {
         this.model.monographs ||
         this.model.digraphs ||
         this.model.diacritics ||
-        this.model.digraphsdiacritics
+        this.model.digraphsdiacritics ||
+        this.model.extended
       )
     ) {
       this.displayIncludeError = true;
     } else {
       this.practice.setModel(this.model);
-      this.router.navigateByUrl('hiragana/practice');
+      this.router.navigate([`${this.syllabary.toLocaleLowerCase()}/practice`]);
     }
   }
 }

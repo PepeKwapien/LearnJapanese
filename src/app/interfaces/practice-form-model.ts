@@ -6,4 +6,5 @@ export interface PracticeFormModel {
   digraphs: boolean;
   diacritics: boolean;
   digraphsdiacritics: boolean;
+  extended?: boolean;
 }

@@ -77,6 +77,21 @@ import { JapaneseMonographColumns } from '../enums/japanese-monograph-columns';
 import { JapaneseMonographRows } from '../enums/japanese-monograph-rows';
 import { Syllabaries } from '../enums/syllabaries';
 import { JapaneseCharacterRow } from '../interfaces/japanese-characters-row';
+import {
+  yExtended,
+  wExtended,
+  vExtended,
+  shExtended,
+  chExtended,
+  tExtended,
+  tyExtended,
+  dExtended,
+  dyExtended,
+  tsExtended,
+  fExtended,
+  fyExtended,
+} from '../data/katakana/katakana-extended';
+import { KatakanaExtendedRows } from '../enums/katakana-extended-rows';
 
 @Injectable({
   providedIn: 'root',
@@ -216,6 +231,24 @@ export class JapaneseSyllabariesService {
     ];
   }
 
+  public getKatakanaExtendedCharacters(): JapaneseCharacterRow[] {
+    return [
+      yExtended,
+      wExtended,
+      vExtended,
+      shExtended,
+      shExtended,
+      chExtended,
+      tExtended,
+      tyExtended,
+      dExtended,
+      dyExtended,
+      tsExtended,
+      fExtended,
+      fyExtended,
+    ];
+  }
+
   public getMonographsColumns() {
     return [
       JapaneseMonographColumns.a,
@@ -257,6 +290,24 @@ export class JapaneseSyllabariesService {
       JapaneseDiacriticRows.d,
       JapaneseDiacriticRows.b,
       JapaneseDiacriticRows.p,
+    ];
+  }
+
+  public getKatakanaExtendedRows() {
+    return [
+      KatakanaExtendedRows.y,
+      KatakanaExtendedRows.w,
+      KatakanaExtendedRows.v,
+      KatakanaExtendedRows.sh,
+      KatakanaExtendedRows.j,
+      KatakanaExtendedRows.ch,
+      KatakanaExtendedRows.t,
+      KatakanaExtendedRows.ty,
+      KatakanaExtendedRows.d,
+      KatakanaExtendedRows.dy,
+      KatakanaExtendedRows.ts,
+      KatakanaExtendedRows.f,
+      KatakanaExtendedRows.fy,
     ];
   }
 }
