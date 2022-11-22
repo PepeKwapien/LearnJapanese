@@ -129,7 +129,7 @@ export const dyExtended: JapaneseCharacterRow = {
   cells: [
     {
       column: JapaneseMonographColumns.u,
-      character: { transcription: 'dyu', character: 'テュ' },
+      character: { transcription: 'dyu', character: 'デュ' },
     },
   ],
 };
