@@ -2,6 +2,8 @@
 
 Simple Angular app I created to learn and memorize Hiragana and Katakana
 
+Try it [here](https://pepekwapien.github.io/LearnJapanese/)!
+
 ![image](https://user-images.githubusercontent.com/51708716/235876342-d629702f-9002-43dd-b061-0b31d683a85a.png)
 
 ## What does it do?
