@@ -1,27 +1,29 @@
 # LearnJapanese
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
+Simple Angular app I created to learn and memorize Hiragana and Katakana
 
-## Development server
+![image](https://user-images.githubusercontent.com/51708716/235876342-d629702f-9002-43dd-b061-0b31d683a85a.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## What does it do?
 
-## Code scaffolding
+The app was designed to let you learn and memorize all Hiragana and Katakana characters
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Each syllabary has section "Learn" and "Practice"
 
-## Build
+## Learn
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The learn option displays tables with characters
 
-## Running unit tests
+![image](https://user-images.githubusercontent.com/51708716/235877063-c55c9d08-5751-4617-90d2-5fecfbe612ae.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Practice
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The practice option lets you check your knowledge
 
-## Further help
+The app gets characters that you've checked and then puts them in a random order. Next each character is displayed either in Romaji (Transcription option) or as Japanese character (Characters option)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+You can check if you remembered the character correctly by displaying the answer
+
+![image](https://user-images.githubusercontent.com/51708716/235877914-299a2fcb-96d0-46b4-960f-a22241bfb162.png)
+![image](https://user-images.githubusercontent.com/51708716/235877988-bdfac119-7d22-4f53-bacd-1a05c1631aeb.png)
